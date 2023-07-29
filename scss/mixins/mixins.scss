@@ -1,0 +1,10 @@
+@mixin linearColor {
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primay-dark
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

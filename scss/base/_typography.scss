@@ -1,4 +1,5 @@
 @import "../abstracts/variables";
+@import "../mixins/mixins.scss";
 
 body {
   font-family: "Lato", sans-serif;
@@ -41,16 +42,9 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 900;
-  background-image: linear-gradient(
-    to right,
-    $color-primary-light,
-    $color-primay-dark
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
+  @include linearColor;
 
   &:hover {
     transform: skew(2deg, 2deg) scale(1.1);
