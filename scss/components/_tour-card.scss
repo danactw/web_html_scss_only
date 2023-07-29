@@ -1,5 +1,3 @@
-@import "../abstracts/variables";
-
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -7,7 +5,6 @@
   height: 50rem;
 
   &-side {
-    background-color: orangered;
     height: 50rem;
     transition: all 1s ease;
     position: absolute;

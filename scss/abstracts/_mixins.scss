@@ -1,0 +1,21 @@
+@mixin defaultBackgroundImage {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.1),
+      rgba(40, 102, 100, 0.7)
+    ),
+    url(../img/mountain.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+@mixin defaultTitle {
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

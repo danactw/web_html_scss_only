@@ -1,6 +1,3 @@
-@import "../abstracts/variables";
-@import "../mixins/mixins.scss";
-
 .feature-box {
   background-color: rgba($color-white, 0.8);
   font-size: $default-font-size;
@@ -11,7 +8,7 @@
 
   &-icon {
     font-size: 6rem;
-    @include linearColor;
+    @include defaultTitle;
   }
 
   &:hover {

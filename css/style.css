@@ -351,7 +351,6 @@ body {
   position: relative;
   height: 50rem; }
   .card-side {
-    background-color: orangered;
     height: 50rem;
     transition: all 1s ease;
     position: absolute;
@@ -396,10 +395,10 @@ body {
 .section-features {
   margin-top: -25vh;
   padding: 20rem 0;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(40, 102, 100, 0.7)), url(../img/mountain.jpg);
   background-size: cover;
-  background-position: center center;
-  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%); }
+  background-position: center center; }
 
 .section-tours {
   background-color: #f7f7f7;

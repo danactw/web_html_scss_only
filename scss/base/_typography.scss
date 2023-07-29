@@ -1,5 +1,5 @@
 @import "../abstracts/variables";
-@import "../mixins/mixins.scss";
+@import "../abstracts/mixins";
 
 body {
   font-family: "Lato", sans-serif;
@@ -44,7 +44,7 @@ body {
   font-weight: 900;
   letter-spacing: 2px;
   transition: all 0.2s;
-  @include linearColor;
+  @include defaultTitle;
 
   &:hover {
     transform: skew(2deg, 2deg) scale(1.1);
