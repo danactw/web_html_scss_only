@@ -311,7 +311,7 @@ body {
     position: absolute;
     z-index: 10;
     transition: all 0.2s;
-    outline-offset: 2rem; }
+    outline-offset: 1rem; }
     .composition-img-1 {
       left: 0;
       top: -2rem; }
@@ -322,7 +322,7 @@ body {
       left: 10rem;
       top: 10rem; }
     .composition-img:hover {
-      outline: 1rem solid #5ba55a;
+      outline: 0.8rem solid #5ba55a;
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
@@ -383,9 +383,9 @@ body {
     .card-img-1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(/img/HallStatt.jpg); }
     .card-img-2 {
-      background-image: linear-gradient(to right bottom, #7cb77b, #376336), url(/img/oleg-chursin-vaPoJZB9Mzg-unsplash.jpg); }
+      background-image: linear-gradient(to right bottom, #7cb77b, #376336), url(/img/autumn.jpg); }
     .card-img-3 {
-      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(/img/sgcdesignco-1FBFMN_3kHk-unsplash.jpg); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(/img/winter.jpg); }
 
 .section-about {
   background-color: #f7f7f7;
