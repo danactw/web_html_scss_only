@@ -1,0 +1,171 @@
+$color-primary-light: #99ffbb;
+$color-primay: #00e64d;
+$color-primay-dark: #00802b;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.1),
+      rgba(40, 102, 100, 0.7)
+    ),
+    url(../img/mountain.jpg);
+  background-size: cover;
+  background-position: center center;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+.logo-box {
+  max-width: max-content;
+
+  &:hover .logo {
+    animation: moveInRight 3s;
+  }
+}
+
+.logo {
+  height: 100px;
+  padding-top: 20px;
+}
+
+.heading-primary {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backface-visibility: hidden;
+
+  &-main {
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: moveInLeft 1s;
+  }
+
+  &-sub {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17px;
+    animation: moveInRight 1s;
+  }
+}
+
+.btn {
+  &:link,
+  &:visited {
+    position: relative;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  &-white {
+    background-color: #fff;
+    color: #777;
+
+    &::after {
+      background-color: #fff;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &-animated {
+    animation: moveInBottom 0.5s ease-in-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
