@@ -1,0 +1,27 @@
+.header {
+  height: 95vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.1),
+      rgba(40, 102, 100, 0.7)
+    ),
+    url(../img/mountain.jpg);
+  background-size: cover;
+  background-position: center center;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+.logo-box {
+  max-width: max-content;
+
+  &:hover .logo {
+    animation: moveInRight 3s;
+  }
+}
+
+.logo {
+  height: 100px;
+  padding-top: 20px;
+}

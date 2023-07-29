@@ -3,10 +3,41 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: inherit; }
 
 html {
   font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 body {
   font-family: "Lato", sans-serif;
@@ -15,24 +46,6 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 30px; }
-
-.header {
-  height: 95vh;
-  width: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(40, 102, 100, 0.7)), url(../img/mountain.jpg);
-  background-size: cover;
-  background-position: center center;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
-
-.logo-box {
-  max-width: max-content; }
-  .logo-box:hover .logo {
-    animation: moveInRight 3s; }
-
-.logo {
-  height: 100px;
-  padding-top: 20px; }
 
 .heading-primary {
   position: absolute;
@@ -99,30 +112,20 @@ body {
   animation: moveInBottom 0.5s ease-in-out 0.75s;
   animation-fill-mode: backwards; }
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px); }
-  80% {
-    transform: translateX(10px); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
+.header {
+  height: 95vh;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(40, 102, 100, 0.7)), url(../img/mountain.jpg);
+  background-size: cover;
+  background-position: center center;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
 
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px); }
-  80% {
-    transform: translateX(-10px); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
+.logo-box {
+  max-width: max-content; }
+  .logo-box:hover .logo {
+    animation: moveInRight 3s; }
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(30px); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
+.logo {
+  height: 100px;
+  padding-top: 20px; }
