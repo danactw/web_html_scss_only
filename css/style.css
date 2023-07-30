@@ -106,6 +106,9 @@ body {
 .u-margin-bottom-large {
   margin-bottom: 8rem; }
 
+.u-margin-top-large {
+  margin-top: 8rem; }
+
 :root {
   --col-gap:10px; }
 
@@ -265,6 +268,12 @@ body {
   .btn-white::after {
     background-color: #fff; }
 
+.btn-green {
+  background-color: #5ba55a;
+  color: #fff; }
+  .btn-green::after {
+    background-color: #fff; }
+
 .btn::after {
   content: "";
   display: inline-block;
@@ -359,11 +368,19 @@ body {
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
-    overflow: hidden; }
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
     .card-side-front {
       background-color: #fff; }
     .card-side-back {
-      transform: rotateY(180deg); }
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff; }
+      .card-side-back .price {
+        font-size: 8rem; }
       .card-side-back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
       .card-side-back-2 {
@@ -386,6 +403,42 @@ body {
       background-image: linear-gradient(to right bottom, #7cb77b, #376336), url(/img/autumn.jpg); }
     .card-img-3 {
       background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(/img/winter.jpg); }
+  .card-heading {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    width: 60%; }
+    .card-heading-1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+      padding: 10px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone; }
+    .card-heading-2 {
+      background-image: linear-gradient(to right bottom, rgba(124, 183, 123, 0.85), rgba(55, 99, 54, 0.85));
+      padding: 10px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone; }
+    .card-heading-3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
+      padding: 10px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone; }
+  .card-details {
+    text-align: center; }
+    .card-details ul {
+      list-style: none;
+      font-size: 1.6rem;
+      width: 80%;
+      margin: auto; }
+      .card-details ul li {
+        line-height: 5rem;
+        position: relative; }
+        .card-details ul li:not(:last-child) {
+          border-bottom: 1px solid #ccc; }
 
 .section-about {
   background-color: #f7f7f7;
