@@ -1,0 +1,52 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  padding: 6rem;
+  background-color: rgba($color-white, 0.6);
+  display: flex;
+  transform: skewX(-12deg);
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  &-pic {
+    width: 15rem;
+    height: 15rem;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+    .caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: $color-white;
+      font-size: 2rem;
+      width: 10rem;
+      z-index: 10;
+      transition: all 0.8s ease 0.2s;
+    }
+
+    &:hover {
+      .caption {
+        opacity: 1;
+      }
+      img {
+        filter: blur(3px) brightness(80%);
+      }
+    }
+  }
+  &-text {
+    width: calc(100% - 15rem);
+    padding: 10px;
+  }
+}
