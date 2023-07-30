@@ -313,6 +313,10 @@ body {
 
 .composition {
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .composition {
+      margin-top: 30px;
+      height: 20vh; } }
   .composition-img {
     width: 55%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
@@ -330,6 +334,12 @@ body {
     .composition-img-3 {
       left: 10rem;
       top: 10rem; }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      .composition-img {
+        position: relative; }
+        .composition-img-1, .composition-img-2, .composition-img-3 {
+          left: 0;
+          top: 0; } }
     .composition-img:hover {
       outline: 0.8rem solid #5ba55a;
       transform: scale(1.05) translateY(-0.5rem);
@@ -478,6 +488,12 @@ body {
   .story-text {
     width: calc(100% - 15rem);
     padding: 10px; }
+  @media screen and (max-width: 768px) {
+    .story {
+      flex-wrap: wrap;
+      justify-content: center; }
+      .story-text {
+        width: 100%; } }
 
 .bg-video {
   position: absolute;
@@ -494,8 +510,11 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 25rem 0 15rem;
   margin-top: -20vh; }
+  @media screen and (max-width: 768px) {
+    .section-about {
+      padding: 25rem 0 30rem; } }
 
 .section-features {
   margin-top: -25vh;
@@ -504,6 +523,9 @@ body {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(40, 102, 100, 0.7)), url(../img/mountain.jpg);
   background-size: cover;
   background-position: center center; }
+  @media screen and (max-width: 768px) {
+    .section-features {
+      clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); } }
 
 .section-tours {
   background-color: #f7f7f7;
