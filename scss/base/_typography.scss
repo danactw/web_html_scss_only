@@ -4,10 +4,9 @@
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: $default-font-size;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
 }
 
 .heading-primary {
@@ -23,17 +22,25 @@ body {
   backface-visibility: hidden;
 
   &-main {
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation: moveInLeft 1s;
+
+    @include respond(phone) {
+      font-size: 5rem;
+      letter-spacing: 1rem;
+    }
   }
 
   &-sub {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17px;
+    letter-spacing: $default-font-size;
     animation: moveInRight 1s;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -45,6 +52,14 @@ body {
   letter-spacing: 2px;
   transition: all 0.2s;
   @include defaultTitle;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skew(2deg, 2deg) scale(1.1);

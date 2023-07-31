@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   transform: skewX(-12deg);
+  box-shadow: $default-box-shadow-small;
 
   & > * {
     transform: skewX(12deg);

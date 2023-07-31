@@ -7,9 +7,22 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0rem; } }
 
 @keyframes moveInLeft {
   0% {
@@ -42,10 +55,9 @@ body {
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
-  padding: 30px; }
+  color: #777; }
 
 .heading-primary {
   position: absolute;
@@ -59,15 +71,22 @@ body {
   transform: translate(-50%, -50%);
   backface-visibility: hidden; }
   .heading-primary-main {
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation: moveInLeft 1s; }
+    @media (max-width: 37.5em) {
+      .heading-primary-main {
+        font-size: 5rem;
+        letter-spacing: 1rem; } }
   .heading-primary-sub {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17px;
+    letter-spacing: 1.6rem;
     animation: moveInRight 1s; }
+    @media (max-width: 37.5em) {
+      .heading-primary-sub {
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   display: inline-block;
@@ -80,6 +99,12 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skew(2deg, 2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -246,10 +271,9 @@ body {
   position: relative;
   text-decoration: none;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 1.6rem;
   padding: 10px 20px;
   text-transform: uppercase;
-  margin-top: 30px;
   transition: all 0.2s;
   display: inline-block; }
 
@@ -266,7 +290,8 @@ body {
 
 .btn-white {
   background-color: #fff;
-  color: #777; }
+  color: #777;
+  margin-top: 20px; }
   .btn-white::after {
     background-color: #fff; }
 
@@ -300,15 +325,15 @@ body {
   transition: all 0.2s; }
 
 .btn-text:hover {
-  background-color: #5ba55a;
   color: #fff;
+  background-color: #5ba55a;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  padding: 0 10px;
+  padding: 3px 10px;
   border-radius: 30px;
   transform: translateY(-2px); }
 
 .btn-text:active {
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   transform: translateY(0); }
 
 .composition {
@@ -320,7 +345,7 @@ body {
   .composition-img {
     width: 55%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-    border-radius: 2px;
+    border-radius: 3px;
     position: absolute;
     z-index: 10;
     transition: all 0.2s;
@@ -338,12 +363,12 @@ body {
       .composition-img {
         position: relative; }
         .composition-img-1, .composition-img-2, .composition-img-3 {
-          left: 0;
+          left: 20%;
           top: 0; } }
     .composition-img:hover {
       outline: 0.8rem solid #5ba55a;
       transform: scale(1.05) translateY(-0.5rem);
-      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
       z-index: 20; }
   .composition:hover .composition-img:not(:hover) {
     transform: scale(0.95); }
@@ -418,7 +443,7 @@ body {
     top: 5%;
     left: 0;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 600;
     color: #fff;
     width: 60%; }
@@ -456,7 +481,9 @@ body {
   padding: 6rem;
   background-color: rgba(255, 255, 255, 0.6);
   display: flex;
-  transform: skewX(-12deg); }
+  align-items: center;
+  transform: skewX(-12deg);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .story > * {
     transform: skewX(12deg); }
   .story-pic {
@@ -508,9 +535,51 @@ body {
     height: 100%;
     object-fit: cover; }
 
+.book-form {
+  width: 50%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  right: 0; }
+  @media screen and (max-width: 768px) {
+    .book-form {
+      width: 100%; } }
+  .book-form .form-group:not(:last-child) {
+    margin-bottom: 2rem; }
+  .book-form .form-input {
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    display: block; }
+    .book-form .form-input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      border-bottom: 3px solid #5ba55a; }
+      .book-form .form-input:focus:invalid {
+        border-bottom: 3px solid #ff7730; }
+    .book-form .form-input::-webkit-input-placeholder {
+      color: #999; }
+  .book-form .form-label {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s; }
+  .book-form .form-input:placeholder-shown + label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
+
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0 15rem;
+  padding: 20rem 0;
   margin-top: -20vh; }
   @media screen and (max-width: 768px) {
     .section-about {
@@ -529,12 +598,31 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 15rem;
+  padding: 20rem 0 10rem;
   margin-top: -25vh; }
 
 .section-stories {
   position: relative;
   padding: 10rem 0; }
+
+.section-booking {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }
+
+.book {
+  width: 80%;
+  margin: auto;
+  background-image: linear-gradient(260deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(40, 102, 100, 0.7)), url(../img/mountain.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  height: 40rem;
+  position: relative; }
+  @media screen and (max-width: 768px) {
+    .book {
+      background-image: linear-gradient(260deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(40, 102, 100, 0.7)), url(../img/mountain.jpg); } }
 
 .header {
   height: 95vh;

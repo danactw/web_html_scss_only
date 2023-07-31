@@ -4,10 +4,9 @@
     position: relative;
     text-decoration: none;
     border-radius: 30px;
-    font-size: 15px;
+    font-size: $default-font-size;
     padding: 10px 20px;
     text-transform: uppercase;
-    margin-top: 30px;
     transition: all 0.2s;
     display: inline-block;
   }
@@ -29,6 +28,7 @@
   &-white {
     background-color: #fff;
     color: #777;
+    margin-top: 20px;
 
     &::after {
       background-color: #fff;
@@ -72,16 +72,16 @@
   }
 
   &:hover {
-    background-color: $color-primary;
     color: $color-white;
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    background-color: $color-primary;
+    box-shadow: $default-box-shadow-small;
     padding: 3px 10px;
     border-radius: 30px;
     transform: translateY(-2px);
   }
 
   &:active {
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    box-shadow: $default-box-shadow-small;
     transform: translateY(0);
   }
 }
