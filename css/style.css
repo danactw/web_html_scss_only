@@ -710,7 +710,7 @@ body {
   margin-right: 1rem; }
 
 .navigation-checkbox:checked ~ .navigation-background {
-  transform: scale(50); }
+  transform: scale(80); }
 
 .navigation-checkbox:checked ~ .navigation-nav {
   opacity: 1;
