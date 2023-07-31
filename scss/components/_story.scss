@@ -25,12 +25,8 @@
       background-size: cover;
     }
     .caption {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @include AbsCentered;
       opacity: 0;
-      transform: translate(-50%, -50%);
-      text-align: center;
       color: $color-white;
       font-size: 2rem;
       width: 10rem;
