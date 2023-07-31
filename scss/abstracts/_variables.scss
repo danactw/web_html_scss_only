@@ -10,8 +10,12 @@ $color-tertiary-dark: #5643fa;
 
 $color-grey-light-1: #f7f7f7;
 $color-grey: #ccc;
+$color-grey-dark-1: #999;
 
 $color-black: #000;
 $color-white: #fff;
 
 $default-font-size: 1.6rem;
+$default-border-radius: 3px;
+$default-box-shadow-small: 0 1rem 2rem rgba($color-black, 0.2);
+$default-box-shadow-large: 0 1.5rem 4rem rgba($color-black, 0.4);
